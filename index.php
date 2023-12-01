@@ -32,12 +32,18 @@
                             <h1 class="display-1">Todo List</h1>
                             <ul class="list-group list-group-flush rounded">
                                 <li v-for="(item, index) in list" :key="index" 
-                                :class="{'text-decoration-line-through': item.done === true }" 
+                                :class="{'text-decoration-line-through': item.done === true, 'important': item.important === true}" 
                                 @click.stop="updateTask(index)"
                                 class="list-group-item d-flex justify-content-between">{{ item.text }}
-                                    <span @click.stop="deleteTask(index)">
-                                        <i class="fa-solid fa-recycle"></i>
-                                    </span>
+                                    <div class="d-flex justify-content-between">
+                                        <span @click.stop="importantTask(index)">
+                                            <i class="fa-solid fa-triangle-exclamation" style="color: #b43127;"></i>
+                                        </span>
+                                        <span @click.stop="deleteTask(index)">
+                                            <i class="fa-solid fa-recycle ps-2" style="color: #3b8736;"></i>
+                                        </span>
+                                        
+                                    </div>
                                 </li>
                             </ul>
                         </div>

@@ -42,7 +42,12 @@ h1 {
     backdrop-filter: blur(100px);
     border-radius: 1em;
     margin: 0;
-    height: 380px;
+    height: 400px;
+}
+
+.important {
+    color: red;
+    font-weight: bold;
 }
 
 span {

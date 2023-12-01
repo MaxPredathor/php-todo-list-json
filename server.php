@@ -7,7 +7,8 @@ $list = json_decode($filecontent, true);
 if (isset($_POST['task'])) {
     $newTask = [
         'text' => $_POST['task'],
-        'done' => false
+        'done' => false,
+        'important' => false
     ];
     array_push($list, $newTask);
     file_put_contents('todo-list.json', json_encode($list));
@@ -27,6 +28,20 @@ if (isset($_POST['updatetask'])) {
             file_put_contents('todo-list.json', json_encode($list));
         }else{
             $list[$update]['done'] = false;
+            file_put_contents('todo-list.json', json_encode($list));
+        }
+        
+    }
+}
+
+if (isset($_POST['importanttask'])) {
+    $important = $_POST['importanttask'];
+    if (isset($list[$important])) {
+        if ($list[$important]['important'] === false){
+            $list[$important]['important'] = true;
+            file_put_contents('todo-list.json', json_encode($list));
+        }else{
+            $list[$important]['important'] = false;
             file_put_contents('todo-list.json', json_encode($list));
         }
         

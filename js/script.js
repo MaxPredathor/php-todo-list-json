@@ -61,6 +61,18 @@ createApp({
           console.log(err);
         });
     },
+    importantTask(index) {
+      const data = new FormData();
+      data.append("importanttask", index);
+      axios
+        .post(this.apiUrl, data)
+        .then((res) => {
+          this.list = res.data;
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
   },
   mounted() {
     this.getList();
