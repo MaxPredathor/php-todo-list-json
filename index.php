@@ -24,13 +24,13 @@
 
 <body>
     <div class="wrapper">
-        <div id="app">
+        <div class="mydiv" id="app">
             <section class="todo-list py-3">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h1 class="display-1 text-light">Todo List</h1>
-                            <ul class="list-group list-group-flush border border-1 rounded">
+                            <h1 class="display-1">Todo List</h1>
+                            <ul class="list-group list-group-flush rounded">
                                 <li v-for="(item, index) in list" :key="index" 
                                 :class="{'text-decoration-line-through': item.done === true }" 
                                 @click="updateTask(index)"
@@ -52,8 +52,9 @@
                                 <input type="text" class="form-control" placeholder="Inserisci elemento..."
                                     aria-label="Inserisci nuovo elemento per la lista"
                                     aria-describedby="button-add" @keyup.enter="addTask" v-model="newTask">
-                                <button class="btn btn-outline-warning" type="button"
-                                    id="button-add" @click="addTask()">Inserisci</button>
+                                <button class="btn" type="button"
+                                    id="button-add" @click="addTask()">Inserisci
+                                </button>
                             </div>
                         </div>
                     </div>

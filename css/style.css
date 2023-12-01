@@ -3,8 +3,46 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background: #001632;
+    align-items: top;
+    /* background: #001632; */
+    background-image: url(../images/gif.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ul {
+    border: 1px solid #052956 !important;
+}
+
+li {
+    background-color: #a64c73 !important;
+    border: none !important;
+}
+
+button {
+    border: 1px solid #052956 !important;
+}
+
+button:hover {
+    background-color: #cc5d8d !important;
+}
+
+li:hover {
+
+    background-color: #cc5d8d !important;
+}
+
+h1 {
+    color: #052956;
+    font-weight: bold;
+}
+
+.mydiv {
+    /* background-color: rgba(245, 245, 247, 0.5); */
+    backdrop-filter: blur(100px);
+    border-radius: 1em;
+    margin: 0;
+    height: 380px;
 }
 
 span {
