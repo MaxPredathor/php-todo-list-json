@@ -33,9 +33,9 @@
                             <ul class="list-group list-group-flush rounded">
                                 <li v-for="(item, index) in list" :key="index" 
                                 :class="{'text-decoration-line-through': item.done === true }" 
-                                @click="updateTask(index)"
+                                @click.stop="updateTask(index)"
                                 class="list-group-item d-flex justify-content-between">{{ item.text }}
-                                    <span @click="deleteTask(index)">
+                                    <span @click.stop="deleteTask(index)">
                                         <i class="fa-solid fa-recycle"></i>
                                     </span>
                                 </li>
