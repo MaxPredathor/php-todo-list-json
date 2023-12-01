@@ -6,3 +6,7 @@
     align-items: center;
     background: #001632;
 }
+
+span {
+    cursor: pointer;
+}

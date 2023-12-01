@@ -31,7 +31,13 @@
                         <div class="col-12">
                             <h1 class="display-1 text-light">Todo List</h1>
                             <ul class="list-group list-group-flush border border-1 rounded">
-                                <li v-for="(item, index) in list" :key="index" :class="{'text-decoration-line-through': item.done === true }" class="list-group-item">{{ item.text }}</li>
+                                <li v-for="(item, index) in list" :key="index" 
+                                :class="{'text-decoration-line-through': item.done === true }" 
+                                class="list-group-item d-flex justify-content-between">{{ item.text }}
+                                    <span @click="deleteTask(index)">
+                                        <i class="fa-solid fa-recycle"></i>
+                                    </span>
+                                </li>
                             </ul>
                         </div>
                     </div>

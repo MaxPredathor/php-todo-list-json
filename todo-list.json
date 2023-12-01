@@ -1,18 +1,18 @@
 [
     {
-        "text": "Fare il Bucato",
+        "text": "Computer",
         "done": false
     }, 
     {
-        "text": "Coding",
+        "text": "Playstation",
         "done": true
     }, 
     {
-        "text": "Fare la Spesa",
+        "text": "Iphone 14",
         "done": false
     },
     {
-        "text": "More Coding",
+        "text": "T-shirt",
         "done": true
     }
 ]

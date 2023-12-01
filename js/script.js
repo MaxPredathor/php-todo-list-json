@@ -37,6 +37,18 @@ createApp({
           });
       }
     },
+    deleteTask(index) {
+      const data = new FormData();
+      data.append("deletetask", index);
+      axios
+        .post(this.apiUrl, data)
+        .then((res) => {
+          this.list = res.data;
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
   },
   mounted() {
     this.getList();
