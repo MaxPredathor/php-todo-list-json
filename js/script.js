@@ -6,6 +6,10 @@ createApp({
       apiUrl: "server.php",
       list: [],
       newTask: "",
+      myAll: true,
+      important: false,
+      done: false,
+      notDone: false,
     };
   },
   methods: {
@@ -72,6 +76,12 @@ createApp({
         .catch((err) => {
           console.log(err);
         });
+    },
+    flagSwitch() {
+      this.myAll = false;
+      this.important = false;
+      this.done = false;
+      this.notDone = false;
     },
   },
   mounted() {
