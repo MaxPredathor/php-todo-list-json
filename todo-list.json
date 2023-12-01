@@ -1,1 +1,18 @@
-["HTML","CSS","Responsive design","JavaScript","PHP","vue","Hello","Vue"]
+[
+    {
+        "text": "Fare il Bucato",
+        "done": false
+    }, 
+    {
+        "text": "Coding",
+        "done": true
+    }, 
+    {
+        "text": "Fare la Spesa",
+        "done": false
+    },
+    {
+        "text": "More Coding",
+        "done": true
+    }
+]
