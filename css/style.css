@@ -15,7 +15,7 @@ ul {
 }
 
 li {
-    background-color: #a64c73 !important;
+    background-color: #a84c72 !important;
     border: none !important;
 }
 
@@ -40,9 +40,10 @@ h1 {
 .mydiv {
     /* background-color: rgba(245, 245, 247, 0.5); */
     backdrop-filter: blur(100px);
+    background-position: top;
     border-radius: 1em;
     margin: 0;
-    height: 400px;
+    height: 40%;
 }
 
 .important {
