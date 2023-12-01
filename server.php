@@ -19,8 +19,18 @@ if (isset($_POST['deletetask'])) {
     file_put_contents('todo-list.json', json_encode($list));
 }
 
-if (isset($_GET['updatetask'])) {
-    
+if (isset($_POST['updatetask'])) {
+    $update = $_POST['updatetask'];
+    if (isset($list[$update])) {
+        if ($list[$update]['done'] === false){
+            $list[$update]['done'] = true;
+            file_put_contents('todo-list.json', json_encode($list));
+        }else{
+            $list[$update]['done'] = false;
+            file_put_contents('todo-list.json', json_encode($list));
+        }
+        
+    }
 }
 
 header('Content-Type: application/json');

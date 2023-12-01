@@ -33,6 +33,7 @@
                             <ul class="list-group list-group-flush border border-1 rounded">
                                 <li v-for="(item, index) in list" :key="index" 
                                 :class="{'text-decoration-line-through': item.done === true }" 
+                                @click="updateTask(index)"
                                 class="list-group-item d-flex justify-content-between">{{ item.text }}
                                     <span @click="deleteTask(index)">
                                         <i class="fa-solid fa-recycle"></i>
