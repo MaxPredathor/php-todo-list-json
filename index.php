@@ -50,9 +50,9 @@
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" placeholder="Inserisci elemento..."
                                     aria-label="Inserisci nuovo elemento per la lista"
-                                    aria-describedby="button-add" v-model="newTask">
+                                    aria-describedby="button-add" @keyup.enter="addTask" v-model="newTask">
                                 <button class="btn btn-outline-warning" type="button"
-                                    id="button-add" @click="addTask">Inserisci</button>
+                                    id="button-add" @click="addTask()">Inserisci</button>
                             </div>
                         </div>
                     </div>
